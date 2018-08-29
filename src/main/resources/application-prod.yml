@@ -1,0 +1,7 @@
+server:
+  port: 8082
+
+
+#设置配置文件属性  这是生产环境
+spring:
+  profiles: prod

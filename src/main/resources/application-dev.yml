@@ -1,0 +1,7 @@
+server:
+  port: 8081
+
+
+#设置配置文件属性  这是开发环境
+spring:
+  profiles: dev

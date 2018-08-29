@@ -1,0 +1,33 @@
+#数据库连接信息
+server:
+  port: 8080
+
+
+  #运行指定的配置文件
+spring:
+  profiles:
+        active: dev
+
+
+  #数据库连接信息
+  datasource:
+        url: jdbc:mysql://127.0.0.1:3306/pocket_money?useUnicode=true&characterEncoding=utf-8
+        username: root
+        password: duyongheng
+        driver-class-name: com.mysql.jdbc.Driver
+
+        # 使用druid数据源
+        type: com.alibaba.druid.pool.DruidDataSource
+        filters: stat
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
